@@ -1,4 +1,0 @@
----
-dependencies:
-  - role: "setup/geth"
-  - role: "setup/bootnode"
