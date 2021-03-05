@@ -138,7 +138,7 @@ spec:
       containers:
       - name: installchaincode
         image: {{ $.Values.metadata.images.fabrictools }}
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         stdin: true
         tty: true
         command: ["sh", "-c"]
