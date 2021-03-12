@@ -1,12 +1,12 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: chaincode-install-manufacturer-peer0-1
+  name: chaincode-install-manufacturer-peer0-3
   namespace: manufacturer-net
   annotations:
     fluxcd.io/automated: "false"
 spec:
-  releaseName: chaincode-install-manufacturer-peer0-1
+  releaseName: chaincode-install-manufacturer-peer0-3
   chart:
     git: https://github.com/vmeng/blockchain-automation-framework.git
     ref: local
