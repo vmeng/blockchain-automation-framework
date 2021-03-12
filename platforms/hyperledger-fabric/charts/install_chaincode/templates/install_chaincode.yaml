@@ -192,7 +192,7 @@ spec:
             echo "Finished compiling Java code"
 
             #chaincode path
-            CC_SRC_PATH=$CC_SRC_PATH/build/install/bin/${CHAINCODE_NAME}
+            CC_SRC_PATH=$CC_SRC_PATH/build/install/${CHAINCODE_NAME}
 
             echo $CC_SRC_PATH
           elif [ ${CC_RUNTIME_LANGUAGE} = "node" ]
