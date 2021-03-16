@@ -1,12 +1,12 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: chaincode-install-manufacturer-peer0-3
+  name: chaincode-install-manufacturer-peer0-4
   namespace: manufacturer-net
   annotations:
     fluxcd.io/automated: "false"
 spec:
-  releaseName: chaincode-install-manufacturer-peer0-3
+  releaseName: chaincode-install-manufacturer-peer0-4
   chart:
     git: https://github.com/vmeng/blockchain-automation-framework.git
     ref: local
@@ -40,7 +40,7 @@ spec:
     chaincode:
       builder: hyperledger/fabric-ccenv:2.2.0
       name: atransfer
-      version: 3
+      version: 4
       lang: java
       maindirectory: 
       repository:

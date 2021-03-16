@@ -188,7 +188,8 @@ spec:
             echo "Compiling Java code..."
             chmod +x gradlew
             ./gradlew installDist --stacktrace
-            sleep 30
+            ls -R ./build
+            sleep 130
             cd $current_path
             echo "Finished compiling Java code"
 
