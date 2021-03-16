@@ -181,13 +181,14 @@ spec:
 
             CC_SRC_PATH="$GOPATH/src/github.com/chaincode"
 
-            echo "CC_SRC_PATH= $CC_SRC_PATH"
+            echo "CC_SRC_PATH=$CC_SRC_PATH"
             current_path=`pwd`
             echo $current_path
 
             echo "Compiling Java code..."
             chmod +x gradlew
             ./gradlew installDist --stacktrace
+            sleep 30
             cd $current_path
             echo "Finished compiling Java code"
 
