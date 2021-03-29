@@ -13,26 +13,26 @@
     tags:
       - helm
 
-  - name: Install helm
-    get_url:
-      url: https://get.helm.sh/helm-{{ helm.version }}-{{ helm.os }}-{{ helm.arch }}.tar.gz
-      dest: "{{ tmp_directory.path }}/helm.tar.gz"
-      mode: 0755
-      checksum: "{{ helm.checksum }}"
-    register: helm_download
-    when: not helm_stat_result.stat.exists
-    tags:
-      - helm
+  # - name: Install helm
+  #   get_url:
+  #     url: https://get.helm.sh/helm-{{ helm.version }}-{{ helm.os }}-{{ helm.arch }}.tar.gz
+  #     dest: "{{ tmp_directory.path }}/helm.tar.gz"
+  #     mode: 0755
+  #     checksum: "{{ helm.checksum }}"
+  #   register: helm_download
+  #   when: not helm_stat_result.stat.exists
+  #   tags:
+  #     - helm
 
-  - name: Unzip helm archive
-    unarchive:
-      src: "{{ helm_download.dest }}"
-      dest: "{{ tmp_directory.path }}"
-      copy: no
-      mode: 0755
-    when: not helm_stat_result.stat.exists
-    tags:
-      - helm
+  # - name: Unzip helm archive
+  #   unarchive:
+  #     src: "{{ helm_download.dest }}"
+  #     dest: "{{ tmp_directory.path }}"
+  #     copy: no
+  #     mode: 0755
+  #   when: not helm_stat_result.stat.exists
+  #   tags:
+  #     - helm
 
   - name: create bin directory
     include_role:
@@ -46,7 +46,8 @@
 
   - name: Move helm binaries
     copy:
-      src: "{{ tmp_directory.path }}/{{ helm.os }}-{{ helm.arch }}/{{ bin_item }}"
+      # src: "{{ tmp_directory.path }}/{{ helm.os }}-{{ helm.arch }}/{{ bin_item }}"
+      src: "/usr/local/bin/helm"
       dest: "{{ helm.bin_directory }}/{{ bin_item }}"
       mode: 0755
     with_items:
