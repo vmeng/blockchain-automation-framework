@@ -199,6 +199,8 @@ spec:
 
             if [ -z ${ENDORSEMENT_POLICIES} ]
             then
+            echo '--------'
+            echo ${INVOKE_CMD}
               eval ${INVOKE_CMD}
             else
               endorsement_policy=" --signature-policy ${ENDORSEMENT_POLICIES}"
