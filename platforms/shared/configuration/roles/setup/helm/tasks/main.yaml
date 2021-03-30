@@ -47,7 +47,7 @@
   - name: Move helm binaries
     copy:
       # src: "{{ tmp_directory.path }}/{{ helm.os }}-{{ helm.arch }}/{{ bin_item }}"
-      src: "/usr/local/bin/helm"
+      src: "/Users/vikimeng/Workspace/EclipseWorkspace/hyperledger/bc-network/project/bin/helm"
       dest: "{{ helm.bin_directory }}/{{ bin_item }}"
       mode: 0755
     with_items:
