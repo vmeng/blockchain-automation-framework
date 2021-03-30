@@ -41,7 +41,7 @@ spec:
       builder: hyperledger/fabric-ccenv:2.2.0
       name: private
       version: 1
-      invokearguments: '\"CreateAsset\",\"asset_properties\" :"{\"objectType\":\"asset\",\"assetID\":\"asset1\",\"color\":\"blue\",\"size\":\"5\",\"owner\":\"tom\",\"appraisedValue\":\"35\"}"'
+      invokearguments: '\"CreateAsset\",\"asset_properties\" :"{\"objectType\":\"asset\",\"assetID\":\"asset10\"}"'
       endorsementpolicies:  ''
     channel:
       name: allchannel
