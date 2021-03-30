@@ -16,7 +16,7 @@ spec:
       namespace: carrier-net
       network:
         version: 2.2.0
-      add_organization: false
+      add_organization: true
       images:
         fabrictools: hyperledger/fabric-tools:2.2.0
         alpineutils: hyperledgerlabs/alpine-utils:1.0
