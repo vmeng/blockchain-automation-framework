@@ -170,8 +170,9 @@ spec:
         - |-
           #!/bin/bash sh
           export ARGS='{"Args":'"'["${INVOKE_ARGUMENTS}"]'"'}'
+          echo "-ARGS-----${ARGS}"
           export qARGS="'${ARGS}'"
-          echo "------${qARGS}-"
+          echo "-qARGS-----${qARGS}"
           touch ./invokeChaincode.sh	
           
           version1_4=`echo $NETWORK_VERSION | grep -c 1.4`
